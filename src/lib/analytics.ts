@@ -1,10 +1,8 @@
 import { AnalyticsBrowser } from '@segment/analytics-next'
 
-// Initialize Segment Analytics
+
 const getWriteKey = () => {
-  // Get write key from environment variables
-  // You can set this in your .env file as VITE_SEGMENT_WRITE_KEY
-  return import.meta.env.VITE_SEGMENT_WRITE_KEY
+  return "GuSYClYPKXMO72REcpGRExlCYRLxnFBz"
 }
 
 // Create analytics instance
