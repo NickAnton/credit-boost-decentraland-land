@@ -1,9 +1,12 @@
-
 import { useRef, useEffect, useState } from 'react';
-import { Button } from "@/components/ui/button";
-import { Download } from "lucide-react";
+import BigDownloadButton from './BigDownloadButton';
+import { useCallback } from "react";
 
-const VideoSection = () => {
+interface VideoSectionProps {
+  onTrack?: (eventName: string, properties?: Record<string, any>) => void;
+}
+
+const VideoSection = ({ onTrack }: VideoSectionProps) => {
   const videoRef = useRef<HTMLIFrameElement>(null);
   const [isInView, setIsInView] = useState(false);
 
@@ -34,6 +37,22 @@ const VideoSection = () => {
     };
   }, []);
 
+  const handleClickDownload = useCallback((event: React.MouseEvent<HTMLButtonElement>, trackingData: any) => {
+    if (onTrack) {
+      if(!trackingData?.url) {
+        return;
+      }
+
+      onTrack('Download', {
+        button_location: 'video_section',
+        button_text: 'Download Decentraland',
+        download_type: trackingData?.type,
+        href: trackingData?.url,
+        track_uuid: trackingData?.track_uuid,
+      });
+    }
+  }, [onTrack]);
+
   // Update the iframe src to include autoplay when in view, pause when out of view
   const videoSrc = isInView ? "https://www.youtube.com/embed/ZVHMPBWea8I?autoplay=1&mute=1" : "https://www.youtube.com/embed/ZVHMPBWea8I?autoplay=0";
 
@@ -57,16 +76,18 @@ const VideoSection = () => {
             allowFullScreen 
           />
         </div>
+        <p className="text-xl md:text-3xl lg:text-3xl text-white mb-8 md:mb-10 animate-fade-in leading-relaxed px-4 lg:px-0 drop-shadow-lg font-medium text-center mt-8 md:mt-12">
+          Earn Credits by doing the things you're already here for—logging in, exploring, attending events, checking out profiles.
+          <br />
+          Each small action = more rewards. No spending required.
+        </p>
 
         <div className="flex justify-center mt-8 md:mt-12">
-          <Button 
-            size="lg" 
-            className="bg-gradient-to-r from-dcl-ruby to-dcl-orange hover:from-dcl-ruby/90 hover:to-dcl-orange/90 text-white px-6 md:px-10 py-6 md:py-8 text-lg md:text-xl font-bold rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105 border-2 border-white/30 drop-shadow-lg" 
-            onClick={() => window.open('https://decentraland.org/download', '_blank')}
-          >
-            <Download className="mr-2 md:mr-3 h-5 w-5 md:h-6 md:w-6" />
-            Download Decentraland
-          </Button>
+          <BigDownloadButton
+            onClick={handleClickDownload}
+            label="START EARNING"
+            trackingId="video-section-download"
+          />
         </div>
       </div>
     </section>
