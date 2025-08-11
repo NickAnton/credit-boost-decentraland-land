@@ -24,7 +24,7 @@ const FinalCTA = ({ onTrack }: FinalCTAProps) => {
             </h2>
             
             <p className="text-lg md:text-2xl lg:text-3xl text-white/90 mb-0 max-w-4xl mx-auto leading-relaxed px-4 drop-shadow-lg font-medium">
-              Jump into Decentraland now and start earning up to <span className="text-dcl-yellow font-bold">64 free Credits </span> 
+              Jump into Decentraland now and start earning up to <span className="text-dcl-yellow font-bold">360 free Credits </span> 
               to customize your look with community-made Wearables and Emotes
             </p>
           </div>
@@ -40,7 +40,7 @@ const FinalCTA = ({ onTrack }: FinalCTAProps) => {
             <div className="text-center space-y-3">
               <div className="text-3xl md:text-4xl">🎮</div>
               <div className="text-white font-bold text-lg md:text-xl drop-shadow-md">Join the Beta</div>
-              <div className="text-white/80 text-base md:text-lg drop-shadow-md">Limited 8-week program</div>
+              <div className="text-white/80 text-base md:text-lg drop-shadow-md">Limited 9-week program</div>
             </div>
             <div className="text-center space-y-3">
               <div className="text-3xl md:text-4xl">🎨</div>

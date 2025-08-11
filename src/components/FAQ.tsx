@@ -10,7 +10,7 @@ const FAQ = () => {
   const faqs = [
     {
       question: "How many Credits can I earn per week?",
-      answer: "You can earn up to 8 Marketplace Credits per week by completing simple weekly goals such as logging in and attending events. Over the 8-week beta period, you could earn up to 64 Credits total!"
+      answer: "You can earn up to 40 Marketplace Credits per week by completing simple weekly goals such as logging in and attending events. Over the 9-week beta period, you could earn up to 360 Credits total!"
     },
     {
       question: "What can I buy with Marketplace Credits?",
@@ -18,7 +18,7 @@ const FAQ = () => {
     },
     {
       question: "Do Credits expire?",
-      answer: "Yes, any unused Credits from this beta run will expire on July 27 at 23:59 UTC. Make sure to use them while they're still valid!"
+      answer: "Yes, any unused Credits from this beta run will expire on October 24 at 23:59 UTC. Make sure to use them while they're still valid!"
     },
     {
       question: "Can I trade or transfer Credits?",
