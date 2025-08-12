@@ -19,7 +19,7 @@ const Hero = ({ onTrack }: HeroProps) => {
       button_location: 'hero',
       button_text: 'Learn More'
     });
-    window.open('https://decentraland.org/blog/announcements/marketplace-credits-earn-weekly-rewards-to-power-up-your-look', '_blank');
+    window.open('https://decentraland.org/blog/announcements/marketplace-credits-season-2-bigger-rewards-start-august-11', '_blank');
   };
 
   return <section className="relative min-h-screen flex items-center justify-center px-4 pt-4 pb-6 overflow-hidden">
