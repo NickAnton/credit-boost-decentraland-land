@@ -18,7 +18,7 @@ const FAQ = () => {
     },
     {
       question: "Do Credits expire?",
-      answer: "Yes, any unused Credits from this beta run will expire on October 24 at 23:59 UTC. Make sure to use them while they're still valid!"
+      answer: "Yes, any unused Credits from this beta run will expire on October 26 at 23:59 UTC. Make sure to use them while they're still valid!"
     },
     {
       question: "Can I trade or transfer Credits?",
